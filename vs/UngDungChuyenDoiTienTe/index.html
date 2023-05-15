@@ -42,34 +42,40 @@
             </tr>
         </tbody>
     </table>
+    <div id="result"></div>
 
     <script>
         function calculate() {
             let giaTri = document.getElementById('number').value;
             let Curency1 = document.getElementById('Curency1').value;
             let Curency2 = document.getElementById('Curency2').value;
+            let result = document.getElementById('result')
 
             let VsU = giaTri / 23000;
             let UsV = giaTri * 23000;
             if (Curency1 == Curency2) {
                 console.log(giaTri)
-                // document.write("Tiền quy đổi là: "+giaTri);
+                // document.write("Result: "+giaTri);
+                result.innerHTML = "Result: " + giaTri;
 
             } else {
                 if (Curency1 === "Viet Nam") {
                     console.log(VsU);
+                    result.innerHTML = "Result: " + VsU;
+
+
 
                 } else {
                     console.log(UsV);
+                    result.innerHTML = "Result: " + UsV;
+
 
                 }
 
             }
 
         }
-        document.write("Ket qua là: " + giaTri);
-        document.write("Ket qua là: " + UsV);
-        document.write("Ket qua là: " + VsU);
+
     </script>
 </body>
 
