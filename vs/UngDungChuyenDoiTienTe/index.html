@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table {
+            width: 400px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Curency</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td> <input type="number" id="number"></td>
+                <td><select id="Curency1">
+                        <option value="Viet Nam">Việt Nam</option>
+                        <option value="USD"> USD</option>
+                    </select></td>
+                <td><select id="Curency2">
+                        <option value="Viet Nam">Việt Nam</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </td>
+                <td><button onclick="calculate()" value="Convert">
+                        Convert
+
+                    </button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function calculate() {
+            let giaTri = document.getElementById('number').value;
+            let Curency1 = document.getElementById('Curency1').value;
+            let Curency2 = document.getElementById('Curency2').value;
+
+            let VsU = giaTri / 23000;
+            let UsV = giaTri * 23000;
+            if (Curency1 == Curency2) {
+                console.log(giaTri)
+                // document.write("Tiền quy đổi là: "+giaTri);
+
+            } else {
+                if (Curency1 === "Viet Nam") {
+                    console.log(VsU);
+
+                } else {
+                    console.log(UsV);
+
+                }
+
+            }
+
+        }
+        document.write("Ket qua là: " + giaTri);
+        document.write("Ket qua là: " + UsV);
+        document.write("Ket qua là: " + VsU);
+    </script>
+</body>
+
+</html>
