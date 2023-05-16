@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+
+<body>
+    <h1>Kiểm tra năm nhuận</h1>
+    <p>
+        Năm nhuận là năm: <br>
+    <ul>
+        <li>Những năm chia hết cho 4 mà không chia hết cho 100 là năm nhuận</li>
+        <li>Những năm chia hết cho 100 mà không chia hết cho 400 thì KHÔNG PHẢI là năm nhuận</li>
+        <li>Những năm chia hết đồng thời cho 100 và 400 là năm nhuận</li>
+    </ul>
+
+    </p>
+    <table border="1" ; style="width: 420px;border-collapse: collapse;">
+        <tr>
+            <th></th>
+            <th>Năm</th>
+            <th>Có Nhuận</th>
+            <th>Không Nhuận</th>
+        </tr>
+        <tr>
+            <th>Thông tin</th>
+            <td style="text-align: center;"><input type="number" value="1996" id="nam"></td>
+            <td id="cnh"></td>
+            <td id="knh"></td>
+        </tr>
+    </table>
+    <div><button onclick="Check()" value="Kết quả">Kết quả</button></div>
+    <!-- <div><button onclick="Reset()">Nhập lại</button></div> -->
+
+</body>
+<script>
+    function Check() {
+        let a = +document.getElementById("nam").value;
+        if (a % 4 == 0 && !(a % 100 == 0)) {
+            document.getElementById('cnh').innerText = 'x'
+            document.getElementById('knh').innerText = ''
+
+        } else {
+            if (a % 100 == 0 && !(a % 400 == 0)) {
+                document.getElementById('knh').innerText = 'x'
+                document.getElementById('cnh').innerText = ''
+            } else {
+                if (a % 100 == 0 && a % 400 == 0) {
+                    document.getElementById('cnh').innerText = 'x'
+                    document.getElementById('knh').innerText = ' '
+
+                } else {
+                    document.getElementById('knh').innerText = 'x'
+                    document.getElementById('cnh').innerText = ' '
+
+                }
+
+            }
+
+        }
+
+    }
+    // Reset(){
+    //     document.getElementById('cnh').innerText = ' '
+    //     document.getElementById('knh').innerText = ' '
+    // }
+
+
+</script>
+
+</html>
