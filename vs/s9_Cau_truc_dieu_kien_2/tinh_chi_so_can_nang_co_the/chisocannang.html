@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My homework</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        .throw {
+            border-bottom: 1pt solid black;
+        }
+
+        #result {
+            width: 50px;
+            height: 20px;
+            margin-left: 0;
+            text-align: left;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="width: 300px;">
+        <tbody>
+            <tr class="throw">
+                <td>BMI</td>
+                <td>Interpretatsion</td>
+            </tr>
+            <tr>
+                <td>BMI < 18.5</td>
+                <td>Underweight</td>
+            </tr>
+            <tr>
+                <td>18.5 <= BMI < 25.0</td>
+                <td>Normal</td>
+            </tr>
+            <tr>
+                <td>25.0 <= BMI <30.0 </td>
+                <td>Overweight</td>
+            </tr>
+            <tr>
+                <td>30 <= BMI </td>
+                <td>Obse</td>
+            </tr>
+        </tbody>
+    </table> <br> <br>
+    <table>
+        <tbody>
+
+            <tr>
+                <td>Name</td>
+                <td id="name"></td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td><input type="number" id="weight" placeholder="Nhập vào cân nặng"></td>
+            </tr>
+            <tr>
+                <td>Height</td>
+                <td><input type="number" id="height" placeholder="Nhập vào chiều cao"></td>
+
+            </tr>
+            <tr>
+                <td><button type="button" value="Result" onclick="show()"> Result
+
+                    </button></td>
+                <td id="result"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+<script src="bmi.js">
+
+</script>
+
+</html>
