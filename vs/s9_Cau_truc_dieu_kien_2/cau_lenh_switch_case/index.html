@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu lệnh Switch case</title>
+    <style>
+        table {
+            margin-top: 50px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td><input type="number" id="month" placeholder="Nhập số tháng"></td>
+                <td><input type="button" value="Tính số ngày" onclick="result()"></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <div id="answer"></div>
+    <script>
+        function result() {
+            let thang = +document.getElementById("month").value;
+            switch (thang) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12: document.getElementById("answer").innerText = ("Tháng " + thang + (" có 31 ngày"));
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11: document.getElementById("answer").innerText = ("Tháng " + thang + (" có 30 ngày"));
+                    break;
+                case 2: document.getElementById("answer").innerText = ("Tháng 2 có 28 hoặc 29 ngày");
+                    break;
+                default: document.getElementById("answer").innerText = (" ");
+
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
