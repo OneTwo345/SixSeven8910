@@ -12,36 +12,50 @@
     <table>
         <tbody>
             <tr>
-                <td colspan="4"><input type="number" value="1" id="total"></td>
+                <td colspan="4"><input type="text" id="total"></td>
             </tr>
             <tr>
-                <td><input type="button" value="1" id="number1"></td>
-                <td><input type="button" value="2" id="number2"></td>
-                <td><input type="button" value="3" id="number3"></td>
-                <td><input type="button" value="+" id="number+"></td>
+                <td><input type="button" value="1" onclick="nhapSo(this.value)" id="number1"></td>
+                <td><input type="button" value="2" onclick="nhapSo(this.value)" id="number2"></td>
+                <td><input type="button" value="3" onclick="nhapSo(this.value)" id="number3"></td>
+                <td><input type="button" value="+" onclick="nhapSo(this.value)" id="number+"></td>
             </tr>
             <tr>
-                <td><input type="button" value="4" id="number4"></td>
-                <td><input type="button" value="5" id="number5"></td>
-                <td><input type="button" value="6" id="number6"></td>
-                <td><input type="button" value="-" id="number-"></td>
+                <td><input type="button" value="4" onclick="nhapSo(this.value)" id="number4"></td>
+                <td><input type="button" value="5" onclick="nhapSo(this.value)" id="number5"></td>
+                <td><input type="button" value="6" onclick="nhapSo(this.value)" id="number6"></td>
+                <td><input type="button" value="-" onclick="nhapSo(this.value)" id="number-"></td>
             </tr>
             <tr>
-                <td><input type="button" value="7" id="number7"></td>
-                <td><input type="button" value="8" id="number8"></td>
-                <td><input type="button" value="9" id="number9"></td>
-                <td><input type="button" value="x" id="numberx"></td>
+                <td><input type="button" value="7" onclick="nhapSo(this.value)" id="number7"></td>
+                <td><input type="button" value="8" onclick="nhapSo(this.value)" id="number8"></td>
+                <td><input type="button" value="9" onclick="nhapSo(this.value)" id="number9"></td>
+                <td><input type="button" value="*" onclick="nhapSo(this.value)" id="numberx"></td>
             </tr>
             <tr>
-                <td><input type="button" value="C" id="numberc"></td>
-                <td><input type="button" value="0" id="number0"></td>
-                <td><input type="button" value="=" id="number="></td>
-                <td><input type="button" value="/" id="number/"></td>
+                <td><input type="button" value="C" onclick="nhapSo(this.value)" id="numberc"></td>
+                <td><input type="button" value="0" onclick="nhapSo(this.value)" id="number0"></td>
+                <td><input type="button" value="=" onclick="nhapSo(this.value)" id="number="></td>
+                <td><input type="button" value="/" onclick="nhapSo(this.value)" id="number/"></td>
             </tr>
         </tbody>
     </table>
+    <script>
+        var total = document.getElementById("total");
+        function nhapSo(i) {
+            console.log(typeof i)
+            if (i == "=") {
+                total.value = eval(total.value);
+            } else if (i == "C") {
+                total.value = ""
+            } else {
+                console.log(i)
+                // console.log(total)
+                total.value += i
+            }
+        }
+    </script>
 </body>
 
-</script>
 
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT4</title>
+</head>
+
+<body>
+    <h3>Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</h3>
+    <table border="1" style="border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <td>Input number a</td>
+                <td>Input number b</td>
+                <td>Input number c</td>
+            </tr>
+            <tr>
+                <td><input type="number" id="numberA"></td>
+                <td><input type="number" id="numberB"></td>
+                <td><input type="number" id="numberC"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div><button type="button" onclick="result()">Kết quả</button></div>
+    <div><button type="button" onclick="reset()">Nhập lại</button></div><br>
+    <div id="result">Số lớn nhất là</div><br>
+    <div id="value">Giá trị lớn nhất là</div>
+
+</body>
+<script>
+
+    function result() {
+        var numbera = +document.getElementById("numberA").value;
+        var numberb = +document.getElementById("numberB").value;
+        var numberc = +document.getElementById("numberC").value;
+        console.log(numbera)
+        console.log(numberb)
+        console.log(numberc)
+        if (numbera > numberb && numbera > numberc) {
+            document.getElementById("result").innerText = ("Số lớn nhất là số a")
+            document.getElementById("value").innerText = ("Giá trị lớn nhất là: " + numbera)
+
+        } else {
+            if (numberb > numberc) {
+                document.getElementById("result").innerText = ("Số lớn nhất là số b")
+                document.getElementById("value").innerText = ("Giá trị lớn nhất là: " + numberb)
+
+            } else if (numberc > numberb) {
+                document.getElementById("result").innerText = ("Số lớn nhất là số c")
+                document.getElementById("value").innerText = ("Giá trị lớn nhất là: " + numberc)
+
+
+            }
+        }
+
+    }
+
+
+
+    function reset() {
+        document.getElementById("result").innerText = (" ");
+        document.getElementById("value").innerText = (" ");
+
+    }
+
+
+</script>
+
+</html>

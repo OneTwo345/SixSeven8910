@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 5</title>
+</head>
+
+<body>
+    <h3>Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra,
+        điểm thi giữa kỳ, điểm thi cuối kỳ</h3>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>Tên</td>
+                <td>Điểm thi giữa kì</td>
+                <td>Điểm thi cuối kì</td>
+
+            </tr>
+            <tr>
+                <td><input type="text" id="name"></td>
+                <td><input type="number" id="midseasonmark"></td>
+                <td><input type="number" id="endseasonmark"></td>
+
+            </tr>
+
+        </tbody>
+    </table>
+    <div id="averagemark"></div>
+    <div> <button type="button" onclick="Showyourresult()" value="Result">Kết quả</button></div>
+    <div><button type="button" onclick="Reset()" value="Reset">Reset</button></div>
+    <script>
+        function Showyourresult() {
+            let midSeasonMark = +document.getElementById("midseasonmark").value;
+            let endSeasonMark = +document.getElementById("endseasonmark").value;
+            let averageSeasonMark = ((midSeasonMark + endSeasonMark) / 2);
+            document.getElementById("averagemark").innerText = ("Điểm thi trung bình là: " + averageSeasonMark)
+
+        }
+
+        function Reset() {
+            document.getElementById("name").value = (" ")
+            document.getElementById("midseasonmark").value = (" ")
+            document.getElementById("endseasonmark").value = (" ")
+            document.getElementById("averagemark").innerText = (" ")
+
+        }
+
+    </script>
+
+</body>
+
+</html>
