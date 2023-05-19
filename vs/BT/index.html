@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Phương Trình bậc 2</title>
+</head>
+
+<body>
+    <h1>Tính Phương Trình bậc 2</h1>
+    <table border="1" style="border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <td></td>
+                <td>Nhập số a</td>
+                <td>Nhập số b</td>
+                <td>Nhập số c</td>
+                <td>x1</td>
+                <td>x2</td>
+            </tr>
+            <tr>
+                <td>Kết quả</td>
+                <td><input type="number" id="inputNumberA"></td>
+                <td><input type="number" id="inputNumberB"></td>
+                <td><input type="number" id="inputNumberC"></td>
+                <td id="x1"></td>
+                <td id="x2"></td>
+            </tr>
+        </tbody>
+    </table> <br>
+    <div> <button onclick="Calculating()" id="result">Kết quả</button></div>
+    <div> <button onclick="Reset()">Đặt lại</button></div>
+
+</body>
+<script>
+    function Calculating() {
+        let a = +document.getElementById("inputNumberA").value;
+        let b = +document.getElementById("inputNumberB").value;
+        let c = +document.getElementById("inputNumberC").value;
+        let d = (b * b) - (4 * a * c);
+
+        let x1 = (-b + Math.sqrt(d)) / (2 * a);
+        let x2 = (-b - Math.sqrt(d)) / (2 * a);
+        let x3 = (-b) / (2 * a);
+        if (d > 0) {
+            document.getElementById("x1").innerText = ("Giá trị x1 là: " + x1);
+            document.getElementById("x2").innerText = ("Giá trị x2 là: " + x2);
+
+        } else {
+            if (d == 0) {
+                document.getElementById("x1").innerText = ("Giá trị x1 là: " + x3);
+                document.getElementById("x2").innerText = ("Giá trị x2 là: " + x3);
+
+            } else {
+                document.getElementById("x1").innerText = ("Vô nghiệm");
+                document.getElementById("x2").innerText = ("Vô nghiệm");
+
+
+            }
+
+        }
+
+    }
+    function Reset() {
+        document.getElementById("x1").innerText = (" ");
+        document.getElementById("x2").innerText = (" ");
+        document.getElementById("inputNumberA").value = (" ");
+        document.getElementById("inputNumberB").value = (" ");
+        document.getElementById("inputNumberC").value = (" ");
+
+    }
+</script>
+
+</html>
