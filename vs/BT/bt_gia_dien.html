@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai tap gia dien</title>
+    <style>
+        table {
+            text-align: left;
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        .yellow {
+            background-color: yellow;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #price1,
+        #price2,
+        #price3,
+        #price4,
+        #price5,
+        #price6 {
+            text-align: center;
+
+
+        }
+
+        h5 {
+            margin-left: 250px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+
+    <table border="1" id="table1">
+        <tbody>
+            <tr>
+                <td class="yellow">Giá bán lẻ điện sinh hoạt</td>
+                <td class="yellow">Giá bán điện (đồng/kWh)</td>
+            </tr>
+            <tr>
+                <td>Bậc 1: Cho kWh từ 0 - 50</td>
+                <td id="price1">1.728</td>
+            </tr>
+            <tr>
+
+                <td>Bậc 2: Cho kWh từ 51 - 100</td>
+                <td id="price2">1.786</td>
+            </tr>
+            <tr>
+
+                <td>Bậc 3: Cho kWh từ 101 - 200</td>
+                <td id="price3">2.074</td>
+            </tr>
+            <tr>
+
+                <td>Bậc 4: Cho kWh từ 201 - 300</td>
+                <td id="price4">2.612</td>
+            </tr>
+            <tr>
+
+                <td>Bậc 5: Cho kWh từ 301 - 400</td>
+                <td id="price5">2.919</td>
+            </tr>
+            <tr>
+
+                <td>Bậc 6: 401 trở lên</td>
+                <td id="price6">3.015 </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Tính giá tiền điện mỗi tháng dựa vào bảng trên?</h3>
+    <h5>Bài làm</h5>
+    <table border="1">
+        <tr style="text-align: center;">
+            <td>Chỉ số cũ </td>
+            <td>Chỉ số mới</td>
+            <td>Số điện sử dụng trong tháng </td>
+            <td>Xếp bậc</td>
+            <td>Số tiền phải trả</td>
+        </tr>
+        <tr>
+            <td><input type="number" id="chiSoCu"></td>
+            <td><input type="number" id="chiSoMoi"></td>
+            <td id="electricInMonth"></td>
+            <td id="rank"></td>
+            <td id="money"></td>
+        </tr>
+    </table>
+    <br>
+    <div><button onclick="If()">Kết quả If</button></div>
+    <div><button onclick="Ifelse()">Kết quả If-Else</button></div>
+    <div><button onclick="SwitchCase()">Kết quả Switch-Case</button></div>
+    <div><button onclick="BacThang()">Kết quả If-Else Bậc Thang</button></div>
+    <div><button onclick="Reset()">Đặt lại</button></div>
+
+
+</body>
+<script>
+    function If() {
+        let chiSoCu = Number(document.getElementById("chiSoCu").value);
+        let chiSoMoi = Number(document.getElementById("chiSoMoi").value);
+        let einmonth = chiSoMoi - chiSoCu;
+        console.log(einmonth);
+        if (0 <= einmonth && einmonth < 50) {
+            document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+            document.getElementById("rank").innerText = ("Xếp bậc 1")
+            document.getElementById("money").innerText = ("" + ((einmonth * 1.728).toFixed(3)))
+        }
+        if (51 <= einmonth && einmonth < 100) {
+
+            document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+            document.getElementById("rank").innerText = ("Xếp bậc 2")
+            document.getElementById("money").innerText = ("" + ((einmonth * 1.786).toFixed(3)))
+
+
+        }
+        if (101 <= einmonth && einmonth < 200) {
+
+            document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+            document.getElementById("rank").innerText = ("Xếp bậc 3")
+            document.getElementById("money").innerText = ("" + ((einmonth * 2.074).toFixed(3)))
+        }
+        if (201 <= einmonth && einmonth < 300) {
+
+            document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+            document.getElementById("rank").innerText = ("Xếp bậc 4")
+            document.getElementById("money").innerText = ("" + ((einmonth * 2.612).toFixed(3)))
+        }
+        if (301 <= einmonth && einmonth < 400) {
+
+            document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+            document.getElementById("rank").innerText = ("Xếp bậc 5")
+            document.getElementById("money").innerText = ("" + ((einmonth * 2.919).toFixed(3)))
+        }
+        if (einmonth > 400) {
+
+            document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+            document.getElementById("rank").innerText = ("Xếp bậc 6")
+            document.getElementById("money").innerText = ("" + ((einmonth * 3.015).toFixed(3)))
+        }
+        if (einmonth < 0) {
+
+            alert("Vui lòng nhập số hợp lệ")
+        }
+
+
+    }
+    function Reset() {
+
+        document.getElementById("chiSoCu").value = ("");
+        document.getElementById("chiSoMoi").value = ("");
+        document.getElementById("electricInMonth").innerText = (" ");
+        document.getElementById("rank").innerText = (" ");
+        document.getElementById("money").innerText = (" ");
+
+
+    }
+    function Ifelse() {
+        let chiSoCu = Number(document.getElementById("chiSoCu").value);
+        let chiSoMoi = Number(document.getElementById("chiSoMoi").value);
+        let einmonth = chiSoMoi - chiSoCu;
+        if (einmonth < 0) {
+            alert("Vui lòng nhập số hợp lệ")
+
+        } else {
+            if (einmonth && einmonth < 50) {
+                document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+                document.getElementById("rank").innerText = ("Xếp bậc 1")
+                document.getElementById("money").innerText = ("" + ((einmonth * 1.728).toFixed(3)))
+
+            } else {
+                if (51 <= einmonth && einmonth < 100) {
+
+                    document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+                    document.getElementById("rank").innerText = ("Xếp bậc 2")
+                    document.getElementById("money").innerText = ("" + ((einmonth * 1.786).toFixed(3)))
+
+                } else {
+                    if (101 <= einmonth && einmonth < 200) {
+                        document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+                        document.getElementById("rank").innerText = ("Xếp bậc 3")
+                        document.getElementById("money").innerText = ("" + ((einmonth * 2.074).toFixed(3)))
+
+                    } else {
+                        if (201 <= einmonth && einmonth < 300) {
+                            document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+                            document.getElementById("rank").innerText = ("Xếp bậc 4")
+                            document.getElementById("money").innerText = ("" + ((einmonth * 2.612).toFixed(3)))
+
+                        } else {
+                            if (301 <= einmonth && einmonth < 400) {
+                                document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+                                document.getElementById("rank").innerText = ("Xếp bậc 5")
+                                document.getElementById("money").innerText = ("" + ((einmonth * 2.919).toFixed(3)))
+
+
+                            } else {
+                                document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+                                document.getElementById("rank").innerText = ("Xếp bậc 6")
+                                document.getElementById("money").innerText = ("" + ((einmonth * 3.015).toFixed(3)))
+
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    function BacThang() {
+        let chiSoCu = Number(document.getElementById("chiSoCu").value);
+        let chiSoMoi = Number(document.getElementById("chiSoMoi").value);
+        let einmonth = chiSoMoi - chiSoCu;
+        if (einmonth < 0) {
+            alert("Vui lòng nhập số hợp lệ")
+
+        } else if (einmonth && einmonth < 50) {
+            document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+            document.getElementById("rank").innerText = ("Xếp bậc 1")
+            document.getElementById("money").innerText = ("" + ((einmonth * 1.728).toFixed(3)))
+
+        } else if (51 <= einmonth && einmonth < 100) {
+
+            document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+            document.getElementById("rank").innerText = ("Xếp bậc 2")
+            document.getElementById("money").innerText = ("" + ((einmonth * 1.786).toFixed(3)))
+
+        } else if (101 <= einmonth && einmonth < 200) {
+            document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+            document.getElementById("rank").innerText = ("Xếp bậc 3")
+            document.getElementById("money").innerText = ("" + ((einmonth * 2.074).toFixed(3)))
+
+        } else if (201 <= einmonth && einmonth < 300) {
+            document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+            document.getElementById("rank").innerText = ("Xếp bậc 4")
+            document.getElementById("money").innerText = ("" + ((einmonth * 2.612).toFixed(3)))
+
+        } else if (301 <= einmonth && einmonth < 400) {
+            document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+            document.getElementById("rank").innerText = ("Xếp bậc 5")
+            document.getElementById("money").innerText = ("" + ((einmonth * 2.919).toFixed(3)))
+
+
+        } else {
+            document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+            document.getElementById("rank").innerText = ("Xếp bậc 6")
+            document.getElementById("money").innerText = ("" + ((einmonth * 3.015).toFixed(3)))
+
+
+        }
+
+
+
+
+
+    }
+
+    function SwitchCase() {
+        let chiSoCu = Number(document.getElementById("chiSoCu").value);
+        let chiSoMoi = Number(document.getElementById("chiSoMoi").value);
+        let einmonth = chiSoMoi - chiSoCu;
+
+        switch (true) {
+            case (einmonth < 0): {
+                alert("Vui lòng nhập số hợp lệ")
+            };
+                break;
+            case (0 <= einmonth && einmonth < 50): {
+                document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+                document.getElementById("rank").innerText = ("Xếp bậc 1")
+                document.getElementById("money").innerText = ("" + ((einmonth * 1.728).toFixed(3)))
+            };
+                break;
+            case (51 <= einmonth && einmonth < 100): {
+                document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+                document.getElementById("rank").innerText = ("Xếp bậc 2")
+                document.getElementById("money").innerText = ("" + ((einmonth * 1.786).toFixed(3)))
+
+            };
+                break;
+            case (101 <= einmonth && einmonth < 200): {
+                document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+                document.getElementById("rank").innerText = ("Xếp bậc 3")
+                document.getElementById("money").innerText = ("" + ((einmonth * 2.074).toFixed(3)))
+            };
+                break;
+            case (201 <= einmonth && einmonth < 300): {
+                document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+                document.getElementById("rank").innerText = ("Xếp bậc 4")
+                document.getElementById("money").innerText = ("" + ((einmonth * 2.612).toFixed(3)))
+            };
+                break;
+            case (301 <= einmonth && einmonth < 400): {
+                document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+                document.getElementById("rank").innerText = ("Xếp bậc 5")
+                document.getElementById("money").innerText = ("" + ((einmonth * 2.919).toFixed(3)))
+            };
+                break;
+            case (einmonth > 400): {
+                document.getElementById("electricInMonth").innerText = ("" + (einmonth.toFixed(3)))
+                document.getElementById("rank").innerText = ("Xếp bậc 6")
+                document.getElementById("money").innerText = ("" + ((einmonth * 3.015).toFixed(3)))
+            };
+                break;
+
+        }
+    }
+
+
+
+
+
+
+</script>
+
+</html>
