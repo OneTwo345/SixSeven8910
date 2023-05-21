@@ -1,0 +1,11 @@
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+let i, len, text;
+
+for (i = 2, len = cars.length, text = ""; i < len; i++) {
+
+    text += cars[i] + " ";
+
+}
+
+alert(text);
