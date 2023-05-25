@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <H3>Viết một chương trình JavaScript để tìm một giá tri được nhập vào từ hộp thoại có nằm trong mảng hay không.
+        Nếu có in ra vị trí của phần tử đó. Trong trường hợp không tìm thấy thông báo không tìm thấy phần tử.</H3>
+
+</body>
+<script>
+    let myArrays = [1, 2, 3, 4, "five"];
+    // console.log(myArrays[3])
+    let inputText = prompt("Nhập vào thứ bạn muốn kiểm tra");
+    let check = false
+    for (let i = 0; i < myArrays.length; i++) {
+        if (inputText == myArrays[i]) {
+            check = true
+            alert("Đơn vị nhập vào có trong mảng tại vị trí: " + i);
+            break
+        }
+    }
+    if (!check) {
+        alert("Đơn vị không có trong mảng")
+    }
+</script>
+
+</html>
