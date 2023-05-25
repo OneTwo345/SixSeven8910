@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array
+
+    </title>
+</head>
+
+<body>
+    <input type="text" id="input1" placeholder="Type your name">
+    <button onclick="Add()">Add</button>;
+    <button onclick="Display()">Display</button>;
+    <div id="show"></div>
+
+</body>
+<script>
+    let x = 0;
+    let mang = [];
+    function Add() {
+        let name = document.getElementById("input1").value;
+        mang.push(name);
+        console.log(mang);
+    }
+
+    function Display() {
+        document.getElementById("show").innerText = (" " + mang)
+    }
+</script>
+
+</html>

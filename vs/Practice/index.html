@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My webpage</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <!-- <h3>Nhập vào các ngày trong năm: </h3><br>
+    <h4>Nếu 01/01 thì hiện chữ Tết</h4>
+    <h4>Nếu 02/02 hè thì hiện chữ đi chơi</h4>
+    <h4>Nếu 05/03 thì hiện chữ đi chơi</h4>
+    <h4>Nếu 06/04 thì hiện chữ bỏ học</h4> -->
+    <p>Nhập vào số điểm <br>
+        Nếu 10 điểm thì được 200k <br>
+        Nếu 9 điểm thì được 100k <br>
+        Nếu 8 điểm thì được 100k <br>
+        Nếu 7 điểm thì được 50k <br>
+        Nếu 6 điểm thì được 50k <br>
+        Nếu 5 điểm thì không được gì <br>
+        Nếu 4 điểm thì được ăn roi<br>
+        Nếu 1 điểm thì bỏ học <br>
+        Còn lại trốn <br>
+
+    </p>
+    <button onclick="season()">Thong bao</button>
+    <button onclick="season1()">Thong bao 1</button>
+    <!-- <p>
+        Kiểu chữ = String (ex: Duy, Trung, Duy96, "15") <br>
+        Kiểu số : 7; 6.5; -4;
+        Kiểu dữ liệu boolean: True/ False   
+
+    </p> -->
+
+
+    <script>
+
+        // alert("Day la may cua Trung");
+
+        // confirm("Day chac chan la may Trung");
+        // Câu điều kiện: If (Điều kiện đưa ra ){Nếu đúng thì sẽ chạy theo lệnh trong ngoặc này}
+        // Else{Nếu điều kiện đưa ra sai thì sẽ chạy theo lệnh trong ngoặc này}
+        //"=" Nghĩa là gán biến
+        // "==" Nghĩa là bằng giá trị
+        //"===" Nghĩa là bằng giá trị và kiểu dữ liệu
+        function season() {
+
+            let mua = prompt("Nhập vào các mùa trong năm");
+            if (mua == "Mùa xuân") {
+                alert("Hoa nở")
+
+            } else {
+                if (mua == "Mùa hè") {
+                    alert("Nghỉ học");
+
+
+                } else {
+                    if (mua == "Mùa thu") {
+                        alert("Khai giảng")
+
+                    } else {
+                        if (mua == "Mùa đông") {
+                            alert("Nghỉ lụt")
+
+                        } else {
+                            alert("Vui lòng nhập lại")
+
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+
+        // Đây là giới thiệu lệnh switch case;
+        // Trong trường hợp so sánh bằng, và cụ thể.
+
+        function season1() {
+
+            let mua = prompt("Nhập vào các ngày trong năm");
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

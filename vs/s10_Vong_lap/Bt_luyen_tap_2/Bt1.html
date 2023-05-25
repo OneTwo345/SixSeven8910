@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT1</title>
+</head>
+
+<body>
+    <h3>In dãy Fibonaci</h3>
+    <h4>Luyện tập sử dụng vòng lặp for, while, do-while, vòng lặp lồng nhau</h4>
+    <button onclick="for1()">For</button>;
+    <button onclick="while1()">While</button>;
+
+
+
+</body>
+<script>
+    //Dùng vòng for//
+    function for1() {
+        let a = 0;
+        console.log(a);
+        let b = 1;
+        console.log(b);
+        let c;
+        let countnumber;
+        let number = Number(prompt("Nhập vào số lượng số Fibonaci"));
+        for (i = 3; i <= number; i++) {
+
+            c = a + b;
+            console.log(c);
+            countnumber = i;
+            console.log("Đếm lần: " + countnumber)
+            a = b;
+            b = c;
+
+        }
+    };
+    // Dùng vòng lặp while;
+    function while1() {
+        let a = 0;
+        let b = 1;
+        console.log(a);
+        console.log(b);
+        let c;
+        let i = 3;
+        number = Number(prompt("Nhập vào số lượng số fibonacci"));
+        while (i <= number) {
+            console.log(`Đếm lần ${i}`); i++;
+            c = a + b; console.log(c);
+            a = b;
+            b = c;
+
+
+        }
+
+
+    }
+    v
+</script>
+
+</html>

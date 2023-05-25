@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Tính tổng của 20 số đầu tiên trong dãy fibonacci.</h3>
+    <script>
+        let a = 0;
+        let b = 1;
+        let c;
+        n = 20;
+        sum = 0;
+        for (i = 3; i <= n; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+            sum += c;
+
+
+
+        }
+        console.log(sum)
+        // Tính tổng 20 số đầu tiên trong dãy Fibonacci
+        // let n = 20; // số lượng số cần tính toán
+        // let a = 0, b = 1, c, sum = 0;
+        // console.log("Các số trong dãy Fibonacci đầu tiên là:");
+        // console.log(a); // in số đầu tiên
+        // console.log(b); // in số thứ hai
+        // sum = a + b; // tính tổng hai số đầu tiên
+        // for (let i = 3; i <= n; i++) {
+        //     c = a + b;
+        //     sum += c; // cộng số hiện tại vào tổng
+        //     a = b;
+        //     b = c;
+        // }
+        // console.log("Tổng của 20 số đầu tiên trong dãy Fibonacci là:", sum);
+
+
+    </script>
+</body>
+
+</html>

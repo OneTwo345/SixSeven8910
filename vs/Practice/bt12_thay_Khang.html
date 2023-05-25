@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <h3>Bài 12: Tính S(n) = x + x^2 + x^3 + … + x^n</h3>
+    <button onclick="loop()"> test</button>
+    <script>
+        function loop() {
+            let n = Number(prompt("Nhập số n"));
+            let x = Number(prompt("Nhập số x"));
+
+            let total = 0;
+            let exponential = 1;
+            for (let i = 1; i <= n; i++) {
+                exponential = 1;
+                for (let j = 1; j <= i; j++) {
+                    exponential = exponential * x;
+
+                }
+
+                total = total + exponential;
+                console.log(total)
+            }
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

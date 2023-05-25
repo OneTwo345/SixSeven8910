@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game đoán số</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-top: 50px;
+        }
+
+        input[type="number"] {
+            font-size: 24px;
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+        }
+
+        .result {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hãy chọn số đúng</h1>
+
+    <button onclick="doanSo()">Chơi</button>
+
+
+    <script>
+
+
+        function doanSo() {
+            let number;
+
+            while (isNaN(number) || number < 1) {
+                number = Number(prompt("Nhập khoảng số bạn muốn chơi "));
+                if (isNaN(number) || number < 1) {
+                    alert("Vui lòng nhập một số nguyên dương");
+                }
+            }
+
+            let randomNumber = Math.floor(Math.random() * number) + 1;
+
+            let guess;
+            let count;
+            while (isNaN(guess) || guess < 1 || guess > number) {
+                guess = Number(prompt(`Nhập số bạn đoán trong khoảng từ 1 đến ${number}`));
+                if (isNaN(guess) || guess < 1 || guess > number) {
+                    alert(`Vui lòng nhập một số trong khoảng từ 1 đến ${number}`);
+                }
+            }
+
+            while (guess !== randomNumber) {
+                if (guess < randomNumber) {
+                    guess = Number(prompt("Số bạn đoán thấp quá! Nhập lại số bạn đoán."));
+                } else if (guess > randomNumber) {
+                    guess = Number(prompt("Số bạn đoán cao quá. Nhập lại số bạn đoán."));
+                }
+                if (isNaN(guess) || guess < 1 || guess > number) {
+                    guess = Number(prompt(`Vui lòng nhập một số trong khoảng từ 1 đến ${number}`));
+                }
+            }
+
+            alert("Chính xác, chúc mừng!");
+            document.write("Số chính xác là: " + guess)
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
