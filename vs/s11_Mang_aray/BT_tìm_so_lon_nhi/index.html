@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let myArrays = [8, 7, 6, 8, 4, 10, 8, 6];
+        let imax2 = 0;
+        let imax = 1;
+
+
+
+        //Tìm giá trị lớn nhất trong mảng.
+        for (let i = 0; i < myArrays.length; i++) {
+
+
+            if (myArrays[i] > myArrays[i + 1]) {
+                imax2 = imax;
+                imax = i;
+            } else if (myArrays[i] > myArrays[imax2] && (myArrays[i]) !== myArrays[imax]) {
+                imax2 = myArrays[i]
+            }
+
+
+        }
+        console.log(`${myArrays[imax]} tại ${imax}`);
+        console.log(myArrays[imax2]);
+    </script>
+</body>
+
+</html>

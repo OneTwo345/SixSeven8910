@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Viết một chương trình JavaScript để tìm giá trị lớn nhất trong mảng cho trước.</h3>
+</body>
+<script>
+    let myArrays2 = [2, 5, 6, 8, 4, "khỏe", 3];
+    let imax = 0;
+    //Tìm giá trị lớn nhất trong mảng.
+    for (let i = 0; i < myArrays2.length; i++) {
+        if (myArrays2[i] > myArrays2[i + 1]) {
+            imax = i;
+            console.log(` Số lớn nhất là ${myArrays2[imax]} tại vị trí ${imax}`)
+        }
+    }
+</script>
+
+</html>

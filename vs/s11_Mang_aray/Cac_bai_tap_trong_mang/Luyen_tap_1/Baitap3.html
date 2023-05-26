@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3> Viết chương trình khởi tạo mảng số nguyên.
+        Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.</h3>
+</body>
+<script>
+    let imax = 0;
+    let Numbers = [8, 9, 6, 15, 9, 15]
+    let sum = 0;
+    let avarage = 0
+    for (let i = 0; i < Numbers.length; i++) {
+        if (Numbers[imax] < Numbers[i]) {
+            imax = i;
+        }
+        sum += Number([Numbers[i]]);
+    }
+    avarage = sum / (Numbers.length);
+    console.log(Numbers[imax])
+    console.log(sum);
+    console.log(avarage);
+</script>
+
+</html>
