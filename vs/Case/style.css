@@ -474,7 +474,28 @@ footer .install #image-app {
     text-align: center;
     flex-direction: column;
     padding: 14px;
+}
 
+#page-header h2,
+#page-header p {
+    color: white;
+}
 
+#pagination {
+    text-align: center;
+}
 
+#pagination a {
+    text-decoration: none;
+    background-color: palevioletred;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+
+}
+
+#pagination a i {
+    font-size: 16px;
+    font-weight: 600;
 }
