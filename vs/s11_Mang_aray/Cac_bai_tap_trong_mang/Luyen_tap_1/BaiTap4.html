@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</h3>
+
+</body>
+<script>
+    let soPhanTu = Number(prompt("Nhập vào tổng số lượng phần tử có trong mảng"));
+    while (isNaN(soPhanTu)) {
+
+        soPhanTu = Number(prompt("Vui lòng nhập số hợp lệ"))
+    }
+    let myArrays = [];
+    for (let i = 0; i > soPhanTu; i++) {
+        myArrays[i] = prompt("Nhập vào phần tử của mảng");
+    }
+    console.log(myArrays);
+    let mainArrays = [];
+    for (let i = 0; i < myArrays.length; i++) {
+        mainArrays.unshift(myArrays[i])
+    }
+    console.log(mainArrays);
+
+
+
+
+
+
+</script>
+
+</html>
