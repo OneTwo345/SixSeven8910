@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+
+<body>
+    <h3>
+        Viết chương trình tạo ra 1 mảng (matrix) 2 chiều với (size1, size2) và giá trị này được người dùng nhập vào.
+        Giá trị của mảng matrix được sinh ngẩu nhiên trong khoảng [10, 50]
+        Hiển thị mảng matrix này ra màn hình</h3>
+
+
+
+</body>
+<script>
+    let size1 = Number(prompt("Nhập giá trị chiều ngang"));
+    while (isNaN(size1) || size1 < 0) {
+        size1 = Number(prompt("Nhập lại giá trị chiều ngang"))
+    };
+    let size2 = Number(prompt("Nhập giá trị chiều dọc"));
+    while (isNaN(size2) || size2 < 0) {
+        size2 = Number(prompt("Nhập lại giá trị chiều dọc"))
+    };
+    let matrix = [];
+    for (let i = 0; i < size1; i++) {
+        let row = [Math.ceil(Math.random() * 40 + 10)];
+        matrix.push(row);
+
+        for (let j = 0; j < size2; j++) {
+            let number = Math.ceil(Math.random() * 40 + 10)
+            row.push(number)
+        }
+    };
+
+    console.log(matrix)
+    document.write(matrix);
+
+</script>
+
+</html>
