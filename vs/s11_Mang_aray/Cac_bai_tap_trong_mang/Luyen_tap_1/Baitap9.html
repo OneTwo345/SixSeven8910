@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+
+<body>
+
+    <h3>Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b.
+        Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên.
+        Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.</h3>
+</body>
+<script>
+    let myArrayA = [];
+    let myArrayB = [];
+    let myArrayC = [];
+
+
+    let size = 10;
+    for (let i = 0; i < size; i++) {
+        myArrayA[i] = prompt("Nhập vào đơn vị mảng");
+    }
+    console.log(myArrayA);
+    for (let i = 0; i < size; i++) {
+        myArrayB[i] = prompt("Nhập vào đơn vị mảng B");
+    }
+    myArrayC = myArrayA.concat(myArrayB)
+    console.log(myArrayC)
+
+
+
+</script>
+
+</html>
