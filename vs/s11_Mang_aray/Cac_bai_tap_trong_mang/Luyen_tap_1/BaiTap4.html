@@ -13,21 +13,29 @@
 
 </body>
 <script>
-    let soPhanTu = Number(prompt("Nhập vào tổng số lượng phần tử có trong mảng"));
-    while (isNaN(soPhanTu)) {
 
-        soPhanTu = Number(prompt("Vui lòng nhập số hợp lệ"))
+    let myArray = [];
+    let mainArray = [];
+    let size = prompt("Nhập vào chiều dài mảng");
+    for (let i = 0; i < size; i++) {
+        myArray[i] = prompt("Nhập vào đơn vị mảng");
     }
-    let myArrays = [];
-    for (let i = 0; i > soPhanTu; i++) {
-        myArrays[i] = prompt("Nhập vào phần tử của mảng");
-    }
-    console.log(myArrays);
-    let mainArrays = [];
-    for (let i = 0; i < myArrays.length; i++) {
-        mainArrays.unshift(myArrays[i])
-    }
-    console.log(mainArrays);
+
+    // for (let i = myArray.length; i > 0; i--) {
+    //     //Đảo ngược từng phần tử trong mảng arNumber
+    //     a = myArray[i - 1];
+    //     //Thêm các phần tử đó vào mảng mới
+    //     mainArray.push(`${a}`);
+    // }
+    // console.log(mainArray);
+    console.log(myArray.reverse());
+
+
+
+
+
+
+
 
 
 

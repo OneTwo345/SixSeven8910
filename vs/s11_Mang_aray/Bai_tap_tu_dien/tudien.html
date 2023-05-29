@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Phát triển một ứng dụng từ điển đơn giản.
+        Ứng dụng cho phép tra cứu các từ tiếng Anh sang tiếng Việt.
+        Danh sách các từ được lưu trữ trong các mảng.</h3>
+
+    <form action="#" method="get">
+        <fieldset>
+            <legend>Từ điển </legend>
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" id="tiengviet" placeholder="Nhập vào tiếng Việt">
+                    </td>
+                    <td>
+                        <input type="text" id="tienganh" placeholder="Nhập vào tiếng Anh">
+                    </td>
+                </tr>
+                <tr>
+                    <button onclick="translation()">Hiển thị kết quả</button>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+</body>
+<script>
+    function translation() {
+        let tiengviet = ["Chuối", "Táo", "Cam", "Thỏ", "Gà",]
+        let tienganh = ["Banana", "Apple", "Orange", "Rabbit", "Chicken",]
+        let tiengVietN = document.getElementById("tiengviet").value;
+        // let tiengAnhH = document.getElementById("tienganh");
+
+        // console.log(tiengviet.indexOf(tiengVietN));
+        for (let index = 0; index < tiengviet.length; index++) {
+            if (tiengVietN == tiengviet[index]) {
+                document.getElementById("tienganh").value = (tienganh[index])
+                // console.log(tienganh[i])
+            }
+
+        }
+
+    }
+</script>
+
+</html>

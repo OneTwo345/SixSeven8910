@@ -18,20 +18,20 @@
 
 </body>
 <script>
-    let size1 = Number(prompt("Nhập giá trị chiều ngang"));
+    let size1 = Number(prompt("Nhập giá trị chiều dọc"));
     while (isNaN(size1) || size1 < 0) {
-        size1 = Number(prompt("Nhập lại giá trị chiều ngang"))
+        size1 = Number(prompt("Nhập lại giá trị chiều dọc"))
     };
-    let size2 = Number(prompt("Nhập giá trị chiều dọc"));
+    let size2 = Number(prompt("Nhập giá trị chiều ngang"));
     while (isNaN(size2) || size2 < 0) {
-        size2 = Number(prompt("Nhập lại giá trị chiều dọc"))
+        size2 = Number(prompt("Nhập lại giá trị chiều ngang"))
     };
     let matrix = [];
     for (let i = 0; i < size1; i++) {
         let row = [Math.ceil(Math.random() * 40 + 10)];
         matrix.push(row);
-
-        for (let j = 0; j < size2; j++) {
+        //matrix[row,row[number]]
+        for (let j = 1; j < size2; j++) {
             let number = Math.ceil(Math.random() * 40 + 10)
             row.push(number)
         }
