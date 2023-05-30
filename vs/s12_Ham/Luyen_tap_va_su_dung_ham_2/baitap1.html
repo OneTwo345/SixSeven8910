@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>
+        Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    </h3>
+    <h4> Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được</h4>
+
+
+
+</body>
+<script>
+    function clickTinhBinhPhuong(a) {
+        return a * a;
+    }
+    console.log(clickTinhBinhPhuong(6));
+
+    function tinhDienTichHinhTron(a) {
+        return a * a * 3.14
+    }
+    console.log(tinhDienTichHinhTron(6))
+    function tinhChuViHinhTron(a) {
+        return 2 * a * Math.PI
+    }
+    console.log(tinhChuViHinhTron(6))
+    function tinhGiaiThua() {
+        let number = 3
+        let total
+
+        for (let i = 1; i <= number; i++) {
+            total *= i
+        }
+        console.log(total);
+
+    }
+    tinhGiaiThua()
+    // console.log(tinhGiaiThua(4))
+
+
+
+
+
+</script>
+
+</html>

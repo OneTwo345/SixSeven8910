@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Bài tập chuyển đổi giữa met và feet</h2>
+    <h3> meter = 0.305 * foot <br>
+        foot = 3.279 * meter </h3>
+    <table border="1" style="width: 500px; border-collapse: collapse;">
+        <tr>
+            <td>Met</td>
+            <td>Feet</td>
+        </tr>
+        <tr>
+            <td><input type="number" id="met"></td>
+            <td><input type="number" id="feet" value="3"></td>
+        </tr>
+    </table>
+    <div><button onclick="exchangeMetToFeet()">Chuyển đổi met sang feet</button></div>
+    <div><button onclick="exchangeFeetToMet()">Chuyển đổi feet sang met</button></div>
+    <div id="result"></div>
+</body>
+<script>
+
+    function exchangeMetToFeet() {
+        let total
+        let inputa = document.getElementById("met").value
+        total = inputa * 3.279
+
+        document.getElementById("result").innerText = total
+    }
+    function exchangeFeetToMet() {
+        let total
+        let inputa = document.getElementById("feet").value
+        total = inputa * 0.305
+
+        document.getElementById("result").innerText = total
+    }
+
+</script>
+
+</html>
