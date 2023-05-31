@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My shop page</title>
+    <title>My web page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 </head>
 
-<body>
+<body id="bodyData">
     <section id="header">
         <a href="#"><img src="image/logo_nuoc_hoa_TN.jpg" class="logo" alt=""></a>
         <div>
             <ul id="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+
 
                 <li><a href="cart.html"><i class="fa fa-cart-arrow-down"></i></a></li>
 
@@ -25,19 +26,52 @@
             </ul>
         </div>
     </section>
-    <section id="page-header">
+    <section id="hero">
+        <h4>Beatiful</h4>
+        <h2>Perfume</h2>
+        <h1>For everyone <br>
 
-
-        <h2 style="color: red;">#BUY NOW</h2>
-
-        <p style="color: black;">You Only Live Once </p>
-
+        </h1>
+        <p>
+        <ul>
+            <li>New Job?</li>
+            <li>New Boyfriend?</li>
+            <li>New Life?</li>
+        </ul>
+        </p>
+        <button onclick="window.location.href='shop.html';">Shop Now</button>
     </section>
-
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="image/free_ship_xe_may.jpg" style width="70px" alt="">
+            <h6>Lovely</h6>
+        </div>
+        <div class="fe-box">
+            <img src="image/dung_hen.jpg" style width="70px" alt="">
+            <h6>On Time</h6>
+        </div>
+        <div class="fe-box">
+            <img src="image/tiet_kiem.jpg" style width="70px" alt="">
+            <h6>Saving</h6>
+        </div>
+        <div class="fe-box">
+            <img src="image/nuoc_hoa_nhi_phong_trang.jpg" style width="70px" alt="">
+            <h6>Styles</h6>
+        </div>
+        <div class="fe-box">
+            <img src="image/white_image_girl_and_cup.jpg" style width="70px" height="99px" alt="">
+            <h6>Chills</h6>
+        </div>
+        <div class="fe-box">
+            <img src="image/hai_ban_tay_phong_trangjpg.jpg" style width="70px" height="99px" alt="">
+            <h6>Easy-To-Use</h6>
+        </div>
+    </section>
     <section id="product1" class="section-p1">
-
-        <div class="pro-container" id="list-product">
-            <!-- <div class="pro" onclick="window.location.href='product.html';">
+        <h2>New Product This Month</h2>
+        <p>Winter Collection</p>
+        <div class="pro-container" id="procontainer">
+            <!-- <div class="pro">
                 <img src="image/nuoc_hoa_4_1.jpg" alt="">
                 <div class="des">
                     <span> BOCCANERA ORTO PARISI. 4.1</span>
@@ -59,8 +93,11 @@
                 <div class="cart">
                     <a href="#"><i class="fa fa-shopping-bag"></i></a>
                 </div>
+
+
+
             </div>
-            <div class="pro" onclick="window.location.href='product.html';">
+            <div class="pro">
                 <img src="image/nuoc_hoa_3_1.jpg" alt="">
                 <div class="des">
                     <span>Jo Malonne 3.1.</span>
@@ -84,8 +121,9 @@
                 </div>
 
 
+
             </div>
-            <div class="pro" onclick="window.location.href='product.html';">
+            <div class="pro">
                 <img src="image/nuoc_hoa_5_1.jpg" alt="">
                 <div class="des">
                     <span>𝐋𝐚𝐧𝐜𝐨̂𝐦𝐞 𝐌𝐢𝐫𝐚𝐜𝐥𝐞 5.1</span>
@@ -159,6 +197,9 @@
                 <div class="cart">
                     <a href="#"><i class="fa fa-shopping-bag"></i></a>
                 </div>
+
+
+
             </div>
             <div class="pro">
                 <img src="image/nuoc_hoa_6_1.jpg" alt="">
@@ -243,10 +284,18 @@
         </div>
 
         </div>
-
-
+    </section>
+    <section id="banner" class="section-m1">
+        <h4> Big Event</h4>
+        <h2>Play Game For Gift</h2>
+        <button class="normal">Explore More</button>
+    </section>
+    <!-- sản phẩm mới -->
+    <section id="product1" class="section-p1">
+        <h2>Favorite Products</h2>
+        <p>Best Choice</p>
         <div class="pro-container">
-            <!-- <div class="pro">
+            <div class="pro">
                 <img src="image/nuoc_hoa_1_1.jpg" alt="">
                 <div class="des">
                     <span>𝘿𝙠𝙣𝙮 Green Apple 1.1</span>
@@ -456,17 +505,26 @@
             </div>
 
 
-        </div> -->
+        </div>
 
         </div>
     </section>
-    <section id="pagination" class="section-p1">
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#"><i class="fa fa-long-arrow-alt-right"></i></a>
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>Crazy Deals</h4>
+            <h2>Buy 10 Get 1 Free For Same Perfume Type</h2>
+            <span>Contact Us</span>
+            <button class="white">Learn More</button>
+        </div>
+        <div class="banner-box banner-box-2">
+            <h4>Sale Off</h4>
+            <h2>On Holidays</h2>
+            <span>Shop now</span>
+            <button class="white">Click here</button>
+        </div>
+
 
     </section>
-
     <section id="newsletter">
         <div class="newtest">
             <h4>Sign up for new newsletter</h4>
@@ -485,17 +543,17 @@
         <div class="col">
             <img class="logo" src="image/logo_nuoc_hoa_TN.jpg" style width="15%" alt="">
             <h4>Contact</h4>
-            <p><strong>Adress: </strong>Lorem ipsum dolor sit amet consectetur.</p>
-            <p><strong>Phone: </strong>Lorem ipsum dolor sit amet consectetur.</p>
-            <p><strong>Hours: </strong>Lorem ipsum dolor sit amet consectetur.</p>
+            <p><strong>Adress: </strong>Hue City.</p>
+            <p><strong>Phone: </strong>0234.123.123</p>
+            <p><strong>Hours: </strong>8AM - 9PM.</p>
             <div class="follow">
                 <h4>Follow us</h4>
                 <div class="icon">
-                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-facebook" style="color: blue;"></i>
                     <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                    <i class="fab fa-tiktok"></i>
+                    <i class="fab fa-instagram" style="color: palevioletred;"></i>
+                    <i class="fab fa-youtube" style="color: red;"></i>
+                    <i class="fab fa-tiktok" style="color: black;"></i>
 
                 </div>
 
@@ -537,73 +595,46 @@
     </footer>
 
 </body>
-<script src="./javascript.js"></script>
+<script src="javascript.js"></script>
 <script>
-    var listProduct = document.getElementById('list-product')
-    console.log(myData);
-    let html = ``
+
+    let content1 = document.getElementById("procontainer");
+    console.log(content1)
+    let html = '';
     myData.map(function (data, index) {
+        console.log(data)
 
-        html += `<div class="pro" onclick="window.location.href='product.html?id=${data.ID}';">
-                <img src="${data.image}" alt="">
-                <div class="des">
-                    <span> ${data.Name}</span>
-                    <h5>${data.Gender}</h5>
-                    <div class="star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
+        html += `
+<div class="pro">
+    <img src="${data.image}"" alt="">
+                <div class=" des">
+    <span>${data.Name}</span>
+    <h5>${data.Gender}</h5>
+    <div class="star">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+    </div>
 
-                    <div>
+    <div>
 
-                        <h4>$${data.Price}</h4>
-                    </div>
-                </div>
+        <h4>$${data.Price}</h4>
+    </div>
+</div>
 
-                <div class="cart">
-                    <a href="#"><i class="fa fa-shopping-bag"></i></a>
-                </div>
-            </div>`
+<div class="cart">
+    <a href="#"><i class="fa fa-shopping-bag"></i></a>
+</div>
 
-        return html
+
+
+</div>
+
+
+</div>`
+
     });
-    function sum(a, b) { return a + b };
-
-    // for (let i = 0; i < myData.length; i++) {
-    //     let data = myData[i]
-    //     if (data.Gender === 'Girl') {
-    //         html += `
-    //     <div class="pro" onclick="window.location.href='product.html?id=${data.ID}';">
-    //             <img src="${data.image}" alt="">
-    //             <div class="des">
-    //                 <span> ${data.Name}</span>
-    //                 <h5>${data.Gender}</h5>
-    //                 <div class="star">
-    //                     <i class="fa fa-star"></i>
-    //                     <i class="fa fa-star"></i>
-    //                     <i class="fa fa-star"></i>
-    //                     <i class="fa fa-star"></i>
-    //                     <i class="fa fa-star"></i>
-    //                 </div>
-
-    //                 <div>
-
-    //                     <h4>$${data.Price}</h4>
-    //                 </div>
-    //             </div>
-
-    //             <div class="cart">
-    //                 <a href="#"><i class="fa fa-shopping-bag"></i></a>
-    //             </div>
-    //         </div>
-    //     `
-    //     }
-
-    // }
-    listProduct.innerHTML = html
+    content1.innerHTML = html
 </script>
-
-</html>

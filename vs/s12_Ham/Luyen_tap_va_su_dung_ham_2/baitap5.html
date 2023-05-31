@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ,
+        trả về số nguyên có giá trị nhỏ nhất.</h3>
+</body>
+<script>
+    function findMinNumber(a, b, c) {
+
+        if (a < b && a < c) {
+            return a
+
+        } else {
+            if (b < c) {
+                return b
+
+            } else {
+                return c
+            }
+
+
+        }
+    }
+    function findMinNumber2(a, b, c) {
+        return Math.min(a, b, c);
+
+    }
+    console.log(findMinNumber2(1, 2, 1))
+
+</script>
+
+</html>

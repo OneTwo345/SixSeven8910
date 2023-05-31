@@ -19,16 +19,16 @@
             <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html" class="active">Shop</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html"><i class="fa fa-cart-arrow-down"></i></a></li>
-                <li><a href="game.html">Game</a></li>
+
+
+                <li><a href="cart.html"><i class="fa fa-cart-arrow-down"></i></a></li>
+
 
             </ul>
         </div>
     </section>
     <section id="prodetails" class="section-p1">
-        <div class="single-pro-images">
+        <!-- <div class="single-pro-images">
             <img src="image/nuoc_hoa_10_1.jpg" width="100%" id="MainImg" alt="">
             <div class="small-img-group">
                 <div class="small-img-col">
@@ -58,18 +58,14 @@
                 <option>full</option>
             </select>
             <input type="number" value="1">
-            <button class="normal">Add to cart</button>
+            <button class="normal" onclick="addProductToCart()">Add to cart</button>
             <h4>Product Details</h4>
             <span> Lorem ipsum dolor sit amet consectetur
                 adipisicing elit. Consequuntur laboriosam et vo
                 luptatibus soluta amet, perferendis eveniet quidem ad f
                 uga deleniti ipsum animi reiciendis. Magnam modi e
                 xcepturi, tempora neque sint sequi?</span>
-        </div>
-
-
-
-
+        </div> -->
     </section>
 
 
@@ -145,30 +141,63 @@
     </footer>
 
 </body>
+<script src="./javascript.js"></script>
 <script>
-    var MainImg = document.getElementById("MainImg");
-    var smallimg = document.getElementsByClassName("small-img")
-    smallimg[0].onclick = function () {
-        MainImg.src = smallimg[0].src
+    // var MainImg = document.getElementById("MainImg");
+    // var smallimg = document.getElementsByClassName("small-img")
+    // smallimg[0].onclick = function () {
+    //     MainImg.src = smallimg[0].src
 
+    // }
+    // smallimg[1].onclick = function () {
+    //     MainImg.src = smallimg[1].src
+
+    // }
+    // smallimg[2].onclick = function () {
+    //     MainImg.src = smallimg[2].src
+
+    // }
+    // smallimg[3].onclick = function () {
+    //     MainImg.src = smallimg[3].src
+
+    // }
+    var id = parseInt(window.location.search.split('=')[1])
+    // console.log(id);
+    console.log(myData);
+    var product = document.getElementById('prodetails');
+    let html = ``;
+    for (let i = 0; i < myData.length; i++) {
+        let data = myData[i]
+        if (data.ID == id) {
+            html += `
+            <div class="single-pro-images">
+                <img src="${data.image}" width="100%" id="MainImg" alt="">
+            </div>
+            <div class="single-pro-details">
+              
+                <h4>${data.Name}</h4>
+                <h2>$${data.Price}</h2>
+                <select>
+                    <option>Select size</option>
+                    <option>5 ml</option>
+                    <option>10 ml</option>
+                    <option>20 ml</option>
+                    <option>full</option>
+                </select>
+                <input type="number" value="1">
+                <button class="normal" onclick="addProductToCart()">Add to cart</button>
+                <h4>Product Details</h4>
+                <span> Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Consequuntur laboriosam et vo
+                    luptatibus soluta amet, perferendis eveniet quidem ad f
+                    uga deleniti ipsum animi reiciendis. Magnam modi e
+                    xcepturi, tempora neque sint sequi?</span> 
+            </div>
+            `
+        }
     }
-    smallimg[1].onclick = function () {
-        MainImg.src = smallimg[1].src
-
-    }
-    smallimg[2].onclick = function () {
-        MainImg.src = smallimg[2].src
-
-    }
-    smallimg[3].onclick = function () {
-        MainImg.src = smallimg[3].src
-
-    }
-
+    product.innerHTML = html
 
 </script>
-
-
-<script src=" java.js"></script>
 
 </html>
