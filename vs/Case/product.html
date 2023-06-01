@@ -138,37 +138,23 @@
         </div> -->
 
 
+
     </footer>
 
 </body>
 <script src="./javascript.js"></script>
 <script>
-    // var MainImg = document.getElementById("MainImg");
-    // var smallimg = document.getElementsByClassName("small-img")
-    // smallimg[0].onclick = function () {
-    //     MainImg.src = smallimg[0].src
 
-    // }
-    // smallimg[1].onclick = function () {
-    //     MainImg.src = smallimg[1].src
-
-    // }
-    // smallimg[2].onclick = function () {
-    //     MainImg.src = smallimg[2].src
-
-    // }
-    // smallimg[3].onclick = function () {
-    //     MainImg.src = smallimg[3].src
-
-    // }
     var id = parseInt(window.location.search.split('=')[1])
-    // console.log(id);
-    console.log(myData);
+
+
     var product = document.getElementById('prodetails');
     let html = ``;
+    let price;
     for (let i = 0; i < myData.length; i++) {
         let data = myData[i]
         if (data.ID == id) {
+            price = data.Price
             html += `
             <div class="single-pro-images">
                 <img src="${data.image}" width="100%" id="MainImg" alt="">
@@ -176,16 +162,16 @@
             <div class="single-pro-details">
               
                 <h4>${data.Name}</h4>
-                <h2>$${data.Price}</h2>
-                <select>
-                    <option>Select size</option>
-                    <option>5 ml</option>
-                    <option>10 ml</option>
-                    <option>20 ml</option>
-                    <option>full</option>
+                <h2 id='priceProduct'>$${data.Price * data.value[0] * 0.1}</h2>
+                <select id ="optionValue">
+                   
+                    ${data.value.map((value) => {
+                return `<option id ="valueOption" value ="${value}">${value} ml</option>`
+            })}
+                    
                 </select>
-                <input type="number" value="1">
-                <button class="normal" onclick="addProductToCart()">Add to cart</button>
+                <input type="number" value="1" id ="valuee"/>
+                <button class="normal" onclick="addProductToCart('${data.ID}','${data.image}', '${data.Name}', '${data.Price}')">Add to cart</button>
                 <h4>Product Details</h4>
                 <span> Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Consequuntur laboriosam et vo
@@ -197,6 +183,75 @@
         }
     }
     product.innerHTML = html
+    let total;
+
+    let priceElement = document.getElementById('priceProduct');
+    // let price = +priceElement.innerHTML.split('$')[1];
+    let inputQuantity = document.getElementById('valuee')
+
+
+    let mySelect = document.getElementById(id = "optionValue");
+    mySelect.addEventListener("change", function () {
+        let selectedOption = this.options[this.selectedIndex];
+        let selectedValue = +selectedOption.value;
+
+        let quantity = inputQuantity.value;
+        let totalPrice = selectedValue * quantity * price * 0.1
+        priceElement.innerHTML = `$${totalPrice}`
+        // console.log(totalPrice);
+    });
+
+
+
+
+
+    function changeQuantity() {
+        let quantity = inputQuantity.value;
+        let selectedValue = +mySelect.value
+        total = price * quantity * selectedValue * 0.1
+        priceElement.innerHTML = `$${total}`
+
+    }
+
+    inputQuantity.addEventListener('change', changeQuantity);
+    ////giới hạn số lượng 
+    let myValueinput = document.getElementById("valuee");
+    myValueinput.min = 0;
+
+    var id = parseInt(window.location.search.split('=')[1])
+    let maxQuantity;
+    for (let i = 0; i < myData.length; i++) {
+        if (id == myData[i].ID) {
+            maxQuantity = myData[i].maxquantity;
+        }
+    }
+    console.log(maxQuantity);
+    myValueinput.max = maxQuantity;
+    // Bắt sự kiện onclick
+
+    function addProductToCart(id, image, name, price) {
+        let value = mySelect.value
+        let quantity = +inputQuantity.value
+        console.log(image, name, price, value, quantity)
+        let idCard = myCart[myCart.length - 1]
+        if (idCard == undefined) {
+            idCard = 1
+        } else {
+            idCard = myCart[myCart.length - 1].id + 1
+        }
+        let checkEqualsEntity = false;
+        myCart.map((cart) => {
+            if (cart.idProduct == id) {
+                cart.quantity += quantity
+                checkEqualsEntity = true
+            }
+        })
+        if (!checkEqualsEntity) {
+            myCart.push({ id: idCard, idProduct: id, Name: name, Price: price, value: value, quantity: quantity, image: image })
+        }
+        localStorage.setItem("myCart", JSON.stringify(myCart))
+        console.log("product", myCart);
+    }
 
 </script>
 

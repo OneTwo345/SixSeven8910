@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My shop page</title>
+    <title>My Cart page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
@@ -35,25 +35,36 @@
 
     </section>
     <section id="cart" class="section-p1">
-        <table width=100%>
+        <table width=100% id="tablecart">
             <thead>
                 <tr>
                     <td>Remove</td>
                     <td>Image</td>
                     <td>Product</td>
                     <td>Price</td>
+                    <td>Capacity</td>
                     <td>Quantity</td>
-                    <td>Subtotal</td>
+
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tbodycart">
                 <tr>
                     <td><a href="#"><i class="far fa-times-circle"></i></a></td>
                     <td><img src="image/nuoc_hoa_10_1.jpg" alt=""></td>
                     <td>𝐉𝐄𝐀𝐍 𝐏𝐀𝐔𝐋𝐆𝐀𝐔𝐋𝐓𝐈𝐄𝐑 𝐒𝐂𝐀𝐍𝐃𝐀𝐋 𝐄𝐃𝐏 10.1</td>
                     <td>$50</td>
+                    <td>30ml</td>
                     <td><input type="number" value="1"></td>
-                    <td>$100</td>
+
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="image/nuoc_hoa_10_1.jpg" alt=""></td>
+                    <td>𝐉𝐄𝐀𝐍 𝐏𝐀𝐔𝐋𝐆𝐀𝐔𝐋𝐓𝐈𝐄𝐑 𝐒𝐂𝐀𝐍𝐃𝐀𝐋 𝐄𝐃𝐏 10.1</td>
+                    <td>$50</td>
+                    <td>30ml</td>
+                    <td><input type="number" value="1"></td>
+
                 </tr>
 
             </tbody>
@@ -146,6 +157,17 @@
     </footer>
 
 </body>
-<script src=" java.js"></script>
+<script src="javascript.js"></script>
+<script>
+    console.log(myCart);
+
+
+
+
+
+
+
+
+</script>
 
 </html>

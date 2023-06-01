@@ -595,7 +595,8 @@
     </footer>
 
 </body>
-<script src="javascript.js"></script>
+
+<script src=" java.js"></script>
 <script>
 
     let content1 = document.getElementById("procontainer");
@@ -605,7 +606,7 @@
         console.log(data)
 
         html += `
-<div class="pro">
+<div class="pro" onclick="window.location.href='shop.html';" >
     <img src="${data.image}"" alt="">
                 <div class=" des">
     <span>${data.Name}</span>
@@ -638,3 +639,5 @@
     });
     content1.innerHTML = html
 </script>
+
+</html>
